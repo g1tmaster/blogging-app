@@ -14,6 +14,7 @@ A simple blogging platform built with the following stack:
 
 To-DO
     just clone the repository and run -->
+       
         cd backend
         npm install       # installs express, prisma, jwt, etc.
         npx prisma generate   # generates prisma client
@@ -22,4 +23,5 @@ To-DO
         npm install       # installs react, react-router, etc.
 
         
+
     and setup your .env file with your postgresql connection
