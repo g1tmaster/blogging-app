@@ -17,6 +17,7 @@ To-DO
        
         cd backend
         npm install       # installs express, prisma, jwt, etc.
+        npm prisma init
         npx prisma generate   # generates prisma client
 
         cd ../frontend
@@ -25,3 +26,4 @@ To-DO
         
 
     and setup your .env file with your postgresql connection
+
