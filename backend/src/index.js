@@ -6,8 +6,8 @@ import  {Hono}  from "hono";
 import {cors} from 'hono/cors';
 import posts from './posts.js';
 import users from "./users.js";
-import pkg from '@vercel/hono';
-const { handle } = pkg;
+// import pkg from '@vercel/hono';
+// const { handle } = pkg;
 
 
 
@@ -28,4 +28,5 @@ const port = Number(process.env.PORT || 8787);
 // console.log(`Server running at http://localhost:${port}`);
 
 
-export default handle(app);
+export default app;
+
