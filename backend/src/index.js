@@ -1,7 +1,7 @@
 import "dotenv/config";                    
 import  {Hono}  from "hono";              
 // for local deployment uncomment below
-// import  {serve}  from "@hono/node-server";
+import  {serve}  from "@hono/node-server";
 
 import {cors} from 'hono/cors';
 import posts from './posts.js';
@@ -21,15 +21,16 @@ app.route("/posts", posts);
 
 
 const port = Number(process.env.PORT || 8787);
-app.fire({ port });
-console.log(`Server running on port ${port}`);
+// app.fire({ port });
+// console.log(`Server running on port ${port}`);
 
 
 //for local deployment run this below codes -->
-// serve({fetch: app.fetch, port});
-// console.log(`Server running at http://localhost:${port}`);
+serve({fetch: app.fetch, port});
+console.log(`Server running at http://localhost:${port}`);
 
 
 export default app;
+
 
 
