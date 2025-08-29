@@ -1,4 +1,6 @@
-const API_URL = "http://localhost:8787";
+// for local deployment us this
+// const API_URL = "http://localhost:8787";
+const API_URL = "https://blogging-app-im22.onrender.com";
 
 export async function getPosts(){
     const res = await fetch(`${API_URL}/posts`);
@@ -84,3 +86,4 @@ export async function signupUser(user) {
     if(!res.ok) throw new Error(data.error || "Signup Failed ");
     return data;
 }
+
