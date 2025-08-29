@@ -21,6 +21,8 @@ app.route("/posts", posts);
 
 
 const port = Number(process.env.PORT || 8787);
+app.fire({ port });
+console.log(`Server running on port ${port}`);
 
 
 //for local deployment run this below codes -->
@@ -29,4 +31,5 @@ const port = Number(process.env.PORT || 8787);
 
 
 export default app;
+
 
