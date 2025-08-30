@@ -1,6 +1,7 @@
 // for local deployment us this
 // const API_URL = "http://localhost:8787";
-const API_URL = "https://blogging-app-im22.onrender.com";
+// const API_URL = "https://blogging-app-im22.onrender.com";
+const API_URL = process.env.REACT_APP_API_URL;
 
 export async function getPosts(){
     const res = await fetch(`${API_URL}/posts`);
@@ -86,4 +87,5 @@ export async function signupUser(user) {
     if(!res.ok) throw new Error(data.error || "Signup Failed ");
     return data;
 }
+
 
